@@ -1,0 +1,49 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: node setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x    
+
+      - uses: actions/checkout@v2
+        with: 
+          repository: 'fraunhofer-iem/kpi-hierarchy-visualization'
+          path: 'vis'
+          
+      - uses: actions/checkout@v2
+        with: 
+          repository: '${{github.event.repository}}'
+          path: 'domain'
+          
+
+      - run: |
+            cd domain
+            echo 'module.exports = {
+              webpack: (config, { buildId, dev }) => {
+                config.resolve.symlinks = false
+                return config
+              },
+              basePath: "/${{github.event.repository.name}}"
+            }' > ../vis/next.config.js
+            cd ../vis
+            cat ../domain/dataModel.json > kpiHierarchy.json
+            npm install
+            npm run export
+            touch out/.nojekyll
+
+            cd ..
+            cd domain
+            
+            git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+            npm install gh-pages
+            npx gh-pages -t -d ../vis/out -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
