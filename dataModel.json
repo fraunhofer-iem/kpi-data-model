@@ -1,0 +1,149 @@
+[
+  {
+    "id": "entity",
+    "name": "Entity",
+    "description": "",
+    "children": ["entityType", "issue", "influence", "entitiyHierarchy", "feature", "kpi"],
+    "parents": []
+  },
+  {
+    "id": "entityType",
+    "name": "Entity Type",
+    "description": "",
+    "children": ["companyEntityType", "processEntityType", "productEntityType", "componentEntityType", "datasourceEntityType"],
+    "parents": ["entity"]
+  },
+  {
+    "id": "companyEntityType",
+    "name": "Company Entity Type",
+    "description": "",
+    "children": [],
+    "parents": ["entityType"]
+  },
+  {
+    "id": "processEntityType",
+    "name": "",
+    "description": "Process Entity Type",
+    "children": [],
+    "parents": ["entityType"]
+  },
+  {
+    "id": "productEntityType",
+    "name": "Product Entity Type",
+    "description": "",
+    "children": [],
+    "parents": ["entityType"]
+  },
+  {
+    "id": "componentEntityType",
+    "name": "Component Entity Type",
+    "description": "",
+    "children": [],
+    "parents": ["entityType"]
+  },
+  {
+    "id": "datasourceEntityType",
+    "name": "Datasource Entity Type",
+    "description": "",
+    "children": [],
+    "parents": ["entityType"]
+  },
+  {
+    "id": "entityHierarchy",
+    "name": "Entity Hierarchy",
+    "description": "",
+    "children": [],
+    "parents": ["entity"]
+  },
+   {
+    "id": "influence",
+    "name": "Influence",
+    "description": "",
+    "children": [],
+    "parents": ["influenceType", "entity"]
+  },
+   {
+    "id": "influenceType",
+    "name": "Influence Type",
+    "description": "",
+    "children": ["influence"],
+    "parents": []
+  },
+  {
+    "id": "issue",
+    "name": "Issue",
+    "description": "",
+    "children": ["cause"],
+    "parents": ["entity", "issueType"]
+  },
+  {
+    "id": "issueType",
+    "name": "Issue Type",
+    "description": "",
+    "children": ["issue"],
+    "parents": []
+  },
+  {
+    "id": "cause",
+    "name": "Cause",
+    "description": "",
+    "children": ["solution"],
+    "parents": ["issue", "causeType"]
+  },
+   {
+    "id": "causeType",
+    "name": "Cause Type",
+    "description": "",
+    "children": ["cause"],
+    "parents": []
+  },
+   {
+    "id": "solution",
+    "name": "Solution",
+    "description": "",
+    "children": [],
+    "parents": ["cause", "solutionType"]
+  },
+   {
+    "id": "solutionType",
+    "name": "Solution Type",
+    "description": "",
+    "children": ["solution"],
+    "parents": []
+  },
+  {
+    "id": "feature",
+    "name": "Feature",
+    "description": "",
+    "children": [],
+    "parents": ["entity"]
+  },
+  {
+    "id": "kpi",
+    "name": "KPI",
+    "description": "",
+    "children": ["kpiHierarchy"],
+    "parents": ["entity", "kpiType"]
+  },
+  {
+    "id": "kpiType",
+    "name": "KPI Type",
+    "description": "",
+    "children": ["kpi", "kpiTypeHierarchy"],
+    "parents": []
+  },
+  {
+    "id": "kpiHierarchy",
+    "name": "KPI Hierarchy",
+    "description": "",
+    "children": [],
+    "parents": ["kpi"]
+  },
+  {
+    "id": "kpiTypeHierarchy",
+    "name": "",
+    "description": "",
+    "children": [],
+    "parents": ["kpiType"]
+  },
+]
