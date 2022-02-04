@@ -3,7 +3,7 @@
     "id": "entity",
     "name": "Entity",
     "description": "",
-    "children": ["entityType", "issue", "influence", "entitiyHierarchy", "feature", "kpi"],
+    "children": ["entityType", "issue", "influence", "entityHierarchy", "feature", "kpi"],
     "parents": []
   },
   {
