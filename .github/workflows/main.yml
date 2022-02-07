@@ -32,8 +32,8 @@ jobs:
               },
               basePath: "/${{github.event.repository.name}}"
             }' > ../vis/next.config.js
+            node prepareJson.js > ../vis/hierarchy.json
             cd ../vis
-            node ../domain/prepareJson.js > hierarchy.json
             npm install
             npm run export
             touch out/.nojekyll
