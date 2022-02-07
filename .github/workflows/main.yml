@@ -33,7 +33,7 @@ jobs:
               basePath: "/${{github.event.repository.name}}"
             }' > ../vis/next.config.js
             cd ../vis
-            cat ../domain/dataModel.json > kpiHierarchy.json
+            cat ../domain/dataModel.json > hierarchy.json
             npm install
             npm run export
             touch out/.nojekyll
