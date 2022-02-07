@@ -1,22 +1,24 @@
 fs = require("fs");
 dataModel = require("./dataModel");
 
-const readDescription = (fileName) => {
+const readFile = (fileName, dir = "doc") => {
   try {
-    return fs.readFileSync(`doc/${fileName}.md`, "utf8");
+    return fs.readFileSync(`${dir ? `${dir}` : "."}/${fileName}.md`, "utf8");
   } catch (e) {
     console.error(`There is no documentation file for ${fileName}`);
   }
   return "";
 };
 
+dataModel.readme = readFile("README", (dir = ""));
+
 dataModel.nodes.forEach((node) => {
   if (node.hasOwnProperty("children")) {
     node.children.forEach((childNode) => {
-      childNode.description = readDescription(childNode.id);
+      childNode.description = readFile(childNode.id);
     });
   } else {
-    node.description = readDescription(node.id);
+    node.description = readFile(node.id);
   }
 });
 
