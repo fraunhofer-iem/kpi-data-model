@@ -34,6 +34,8 @@ jobs:
             }' > ../vis/next.config.js
             node prepareJson.js > ../vis/hierarchy.json
             cd ../vis
+            mkdir -p public
+            cp ../domain/static/favicon.co public/favicon.ico
             npm install
             npm run export
             touch out/.nojekyll
