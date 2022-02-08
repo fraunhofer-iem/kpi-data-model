@@ -35,7 +35,7 @@ jobs:
             node prepareJson.js > ../vis/hierarchy.json
             cd ../vis
             mkdir -p public
-            cp ../domain/static/favicon.co public/favicon.ico
+            cp ../domain/static/favicon.ico public/favicon.ico
             npm install
             npm run export
             touch out/.nojekyll
