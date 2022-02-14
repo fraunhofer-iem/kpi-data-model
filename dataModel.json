@@ -231,6 +231,18 @@
       "name": "Calculation Element",
       "description": "",
       "hidden": true
+    },
+    {
+      "id": "entityHierarchy",
+      "name": "Entity Hierarchy",
+      "description": "",
+      "hidden": true
+    },
+    {
+      "id": "kpiHierarchy",
+      "name": "KPI Hierarchy",
+      "description": "",
+      "hidden": true
     }
   ],
   "edges": [
