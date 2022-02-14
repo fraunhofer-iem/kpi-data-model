@@ -1,2 +1,2 @@
 # Rule Type
-A [rule](rule.md)'s type denotes which phase of the KPI calculation this rule contains calculation instructions for.
+A [rule](rule.md) type denotes which phase of the KPI calculation the associated rule contains calculation instructions for.

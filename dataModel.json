@@ -225,6 +225,12 @@
           "description": ""
         }
       ]
+    },
+    {
+      "id": "calculationElement",
+      "name": "Calculation Element",
+      "description": "",
+      "hidden": true
     }
   ],
   "edges": [
