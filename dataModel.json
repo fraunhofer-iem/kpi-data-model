@@ -243,6 +243,18 @@
       "name": "KPI Hierarchy",
       "description": "",
       "hidden": true
+    },
+    {
+      "id": "limitProblem",
+      "name": "Limit Problem",
+      "description": "",
+      "hidden": true
+    },
+    {
+      "id": "limitInfluences",
+      "name": "Limit Influences",
+      "description": "",
+      "hidden": true
     }
   ],
   "edges": [
