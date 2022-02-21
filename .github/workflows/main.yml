@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
         with: 
           repository: 'fraunhofer-iem/kpi-hierarchy-visualization'
-          ref: 'v1.3.0'
+          ref: 'v1.4.0'
           path: 'vis'
           
       - uses: actions/checkout@v2
