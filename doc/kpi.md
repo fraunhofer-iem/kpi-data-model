@@ -6,9 +6,7 @@ domain-specific examples (production (DN&GEA), sw-development, & SCM)
 * [Entity](entity.md): Short Description (why?)
 * 
 ## Implementation Details
-
-
-
+Describe name (if deviating in DB) and DB-fields
 
 KPIs serve three purposes:
 1. **Representation**: KPIs represent a reference value correlating with the performance of the process as a whole or a process participant. Therefore, KPIs relate to the [entity](entity.md) corresponding to the target of the reference value.
