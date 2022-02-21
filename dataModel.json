@@ -1,6 +1,7 @@
 {
   "readme": "",
   "title": "KPI-based Process Management",
+  "center": "entity",
   "layout": {
     "name": "preset",
     "avoidOverlap": true,
@@ -17,26 +18,6 @@
         "x": 200,
         "y": 0
       },
-      "companyEntityType": {
-        "x": 500,
-        "y": -200
-      },
-      "processEntityType": {
-        "x": 500,
-        "y": -100
-      },
-      "productEntityType": {
-        "x": 500,
-        "y": 0
-      },
-      "componentEntityType": {
-        "x": 500,
-        "y": 100
-      },
-      "datasourceEntityType": {
-        "x": 500,
-        "y": 200
-      },
       "influence": {
         "x": 0,
         "y": -150
@@ -45,29 +26,33 @@
         "x": 0,
         "y": -250
       },
-      "issue": {
+      "problem": {
         "x": -200,
         "y": 0
       },
+      "issue": {
+        "x": -350,
+        "y": -100
+      },
       "issueType": {
-        "x": -200,
-        "y": -150
+        "x": -500,
+        "y": -100
       },
       "cause": {
-        "x": -300,
+        "x": -350,
         "y": 0
       },
       "causeType": {
-        "x": -300,
-        "y": -150
-      },
-      "solution": {
-        "x": -400,
+        "x": -500,
         "y": 0
       },
+      "solution": {
+        "x": -350,
+        "y": 100
+      },
       "solutionType": {
-        "x": -400,
-        "y": -150
+        "x": -500,
+        "y": 100
       },
       "kpi": {
         "x": 0,
@@ -97,41 +82,11 @@
   },
   "nodes": [
     {
-      "id": "entity",
-      "name": "Entity",
-      "description": ""
-    },
-    {
-      "id": "feature",
-      "name": "Feature",
-      "description": ""
-    },
-    {
-      "id": "entityTypeGroup",
+      "id": "entityGroup",
       "children": [
         {
-          "id": "companyEntityType",
-          "name": "Company Entity Type",
-          "description": ""
-        },
-        {
-          "id": "processEntityType",
-          "name": "Process EntityType",
-          "description": ""
-        },
-        {
-          "id": "productEntityType",
-          "name": "Product Entity Type",
-          "description": ""
-        },
-        {
-          "id": "componentEntityType",
-          "name": "Component Entity Type",
-          "description": ""
-        },
-        {
-          "id": "datasourceEntityType",
-          "name": "Datasource Entity Type",
+          "id": "entity",
+          "name": "Entity",
           "description": ""
         },
         {
@@ -140,6 +95,11 @@
           "description": ""
         }
       ]
+    },
+    {
+      "id": "feature",
+      "name": "Feature",
+      "description": ""
     },
     {
       "id": "influenceGroup",
@@ -159,6 +119,11 @@
     {
       "id": "problemGroup",
       "children": [
+        {
+          "id": "problem",
+          "name": "Problem",
+          "description": ""
+        },
         {
           "id": "issue",
           "name": "Issue",
@@ -260,109 +225,182 @@
   "edges": [
     {
       "source": "entity",
-      "target": "entity"
+      "target": "entity",
+      "arrowShape": "diamond"
     },
     {
       "source": "entity",
-      "target": "entityType"
-    },
-    {
-      "source": "entityType",
-      "target": "companyEntityType"
-    },
-    {
-      "source": "entityType",
-      "target": "processEntityType"
-    },
-    {
-      "source": "entityType",
-      "target": "productEntityType"
-    },
-    {
-      "source": "entityType",
-      "target": "componentEntityType"
-    },
-    {
-      "source": "entityType",
-      "target": "datasourceEntityType"
+      "target": "entityType",
+      "arrowShape": "triangle"
     },
     {
       "source": "entity",
-      "target": "influence"
-    },
-    {
-      "source": "influenceType",
-      "target": "influence"
-    },
-    {
-      "source": "entity",
-      "target": "issue"
-    },
-    {
-      "source": "issueType",
-      "target": "issue"
-    },
-    {
-      "source": "causeType",
-      "target": "cause"
-    },
-    {
-      "source": "solutionType",
-      "target": "solution"
-    },
-    {
-      "source": "issue",
-      "target": "cause"
-    },
-    {
-      "source": "cause",
-      "target": "solution"
-    },
-    {
-      "source": "entity",
-      "target": "kpi"
-    },
-    {
-      "source": "kpi",
-      "target": "kpi"
-    },
-    {
-      "source": "kpiType",
-      "target": "kpi"
-    },
-    {
-      "source": "kpiType",
-      "target": "kpiType"
-    },
-    {
-      "source": "kpi",
-      "target": "rule"
-    },
-    {
-      "source": "ruleType",
-      "target": "rule"
-    },
-    {
-      "source": "kpi",
-      "target": "limit"
-    },
-    {
-      "source": "limitType",
-      "target": "limit"
-    },
-    {
-      "source": "limit",
-      "target": "issue"
+      "target": "influence",
+      "arrowShape": "diamond",
+      "targetLabel": "0..*",
+      "style": {
+        "target-text-margin-x": 18,
+        "target-text-margin-y": 7
+      }
     },
     {
       "source": "influence",
-      "target": "limit",
-      "straight": true
+      "target": "influenceType",
+      "arrowShape": "triangle"
+    },
+    {
+      "source": "entity",
+      "target": "problem",
+      "targetLabel": "0..*",
+      "style": {
+        "target-text-margin-x": 18,
+        "target-text-margin-y": -7
+      }
     },
     {
       "source": "issue",
+      "target": "issueType",
+      "arrowShape": "triangle"
+    },
+    {
+      "source": "cause",
+      "target": "causeType",
+      "arrowShape": "triangle"
+    },
+    {
+      "source": "solution",
+      "target": "solutionType",
+      "arrowShape": "triangle"
+    },
+    {
+      "source": "issue",
+      "target": "cause",
+      "targetLabel": "1..*",
+      "style": {
+        "target-text-margin-x": 15,
+        "target-text-margin-y": -6
+      }
+    },
+    {
+      "source": "cause",
+      "target": "solution",
+      "targetLabel": "1..*",
+      "style": {
+        "target-text-margin-x": 15,
+        "target-text-margin-y": -6
+      }
+    },
+    {
+      "source": "entity",
+      "target": "kpi",
+      "arrowShape": "diamond",
+      "targetLabel": "0..*",
+      "style": {
+        "target-text-margin-x": -15,
+        "target-text-margin-y": -5
+      }
+    },
+    {
+      "source": "kpi",
+      "target": "kpi",
+      "arrowShape": "diamond"
+    },
+    {
+      "source": "kpi",
+      "target": "kpiType",
+      "arrowShape": "triangle"
+    },
+    {
+      "source": "kpiType",
+      "target": "kpiType",
+      "arrowShape": "diamond"
+    },
+    {
+      "source": "kpi",
+      "target": "rule",
+      "arrowShape": "diamond",
+      "targetLabel": "2",
+      "style": {
+        "target-text-margin-x": 12,
+        "target-text-margin-y": -5
+      }
+    },
+    {
+      "source": "rule",
+      "target": "ruleType",
+      "arrowShape": "triangle"
+    },
+    {
+      "source": "kpi",
+      "target": "limit",
+      "arrowShape": "diamond",
+      "targetLabel": "1..*",
+      "style": {
+        "target-text-margin-x": 12,
+        "target-text-margin-y": -10
+      }
+    },
+    {
+      "source": "limit",
+      "target": "limitType",
+      "arrowShape": "triangle"
+    },
+    {
+      "source": "limit",
+      "target": "problem",
+      "arrowShape": "diamond",
+      "targetLabel": "1..*",
+      "style": {
+        "target-text-margin-x": 15,
+        "target-text-margin-y": 10
+      }
+    },
+    {
+      "source": "limit",
+      "target": "influence",
+      "straight": true,
+      "targetLabel": "1..*",
+      "style": {
+        "target-text-margin-x": -20,
+        "target-text-margin-y": 10
+      }
+    },
+    {
+      "source": "problem",
       "target": "feature",
       "straight": true
+    },
+    {
+      "source": "problem",
+      "target": "issue",
+      "arrowShape": "diamond",
+      "targetLabel": "1",
+      "style": {
+        "taxi-turn": "50px",
+        "target-text-margin-x": 10,
+        "target-text-margin-y": 12
+      }
+    },
+    {
+      "source": "problem",
+      "target": "cause",
+      "arrowShape": "diamond",
+      "targetLabel": "1",
+      "style": {
+        "target-text-margin-x": 10,
+        "target-text-margin-y": 12
+      }
+    },
+    {
+      "source": "problem",
+      "target": "solution",
+      "arrowShape": "diamond",
+      "targetLabel": "1",
+      "style": {
+        "taxi-turn": "50px",
+        "target-text-margin-x": 10,
+        "target-text-margin-y": 12
+      }
     },
     {
       "source": "entity",
