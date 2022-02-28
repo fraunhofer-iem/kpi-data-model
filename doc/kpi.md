@@ -4,6 +4,7 @@ KPIs serve three purposes:
 2. **Calculation**: KPIs combine data from other KPIs and entities in order to calculate their reference values. Note, that KPIs can only use [calculation elements](calculationElement.md) that are positioned lower within the [KPI](kpiHierarchy.md) or [entity](entityHierarchy.md) hierarchies. Otherwise, there is a risk of introducing circular dependencies.  
 [Rules](rule.md) contain the actual calculation logic.
 3. **Evaluation**: KPIs assess the performance of their referenced entity and point out potential problems in accordance to the [limits](limit.md) assigned to them.
+
 ## Example(s)
 * **Production**:  
   Within ATMs, the note transport path is divided into segments, observed by light sensors detecting passing notes. For each segment, the length of the segment and the travel speed of notes is known. Thus, we can derive an expected travel time for notes along a segment.  
@@ -15,6 +16,7 @@ KPIs serve three purposes:
 * [Calculation Element](calculationElement.md): entities or KPIs that serve as the KPI's data sources
 * [Rule](rule.md): object, that contains the calculation logic specific to a single KPI
 * [Limit](limit.md): object, that enables automated evaluation and feedback
+
 ## Implementation Details
 |**KPI**|
 |:----:|
