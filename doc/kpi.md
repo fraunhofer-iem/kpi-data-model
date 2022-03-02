@@ -8,7 +8,7 @@ KPIs serve three purposes:
 ## Example(s)
 * **Production**:  
   Within ATMs, the note transport path is divided into segments, observed by light sensors detecting passing notes. For each segment, the length of the segment and the travel speed of notes is known. Thus, we can derive an expected travel time for notes along a segment.  
-  We define $NoteTransportTime_{L1, L2}$ as a KPI, that monitors the transport path segment between light sensors `L1` and `L2`. Therefore, it uses light sensors `L1` and `L2` as its calculation elements. Its `rules` calculate the average travel time of notes along this segment. Its `limits` evaluate if the average travel time strays too far from the expected value.    
+  We define `NoteTransportTime`<sub>`L1, L2`</sub> as a KPI, that is assigned to entity `L1, L2`. `L1, L2` represents the transport path segment between light sensors `L1` and `L2` and is a parent of both in the entity hierarchy. Therefore, `NoteTransportTime`<sub>`L1, L2`</sub> can use light sensors `L1` and `L2` as its calculation elements. Its `rules` calculate the average travel time of notes along this segment. Its `limits` evaluate if the average travel time strays too far from the expected value.    
 
 ## Related Elements
 * [KPI Type](kpiType.md): object, that contains general information on the KPI
@@ -22,4 +22,5 @@ KPIs serve three purposes:
 |:----:|
 |id: int|
 |name: str|
+|entity_id: int|
 |kpi_type_id: int|
