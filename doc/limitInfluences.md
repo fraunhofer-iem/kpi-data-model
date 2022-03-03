@@ -16,4 +16,4 @@ Limit influences denote for which influence constellation the respective limit i
 |**Limit Influences**|
 |:---:|
 |limit_id: int|
-|influence_id: id|
+|influence_id: int|
