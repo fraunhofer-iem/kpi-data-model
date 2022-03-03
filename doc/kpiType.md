@@ -11,7 +11,7 @@ The KPI type lists which [features](feature.md) are evaluated by its instances. 
 
 ## Related Elements
 * [KPI](kpi.md): entity-specific instance of the KPI type
-* [Feature](feature.md): list of features evaluated by instances of the KPI type
+* [Feature](feature.md): collection of features evaluated by instances of the KPI type
 * [KPI type hierarchy](kpiTypeHierarchy.md): hierarchy information on KPI types
 
 ## Implementation Details
