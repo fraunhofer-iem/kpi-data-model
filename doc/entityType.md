@@ -9,6 +9,7 @@ An [entity](entity.md) type distinguishes the different kinds of entities from e
 
 ## Related Elements
 * [Entity](entity.md): instances of the entity type
+* [Feature](feature.md): collection of features, that can be (partly) realized by instances of the entity type 
 
 ## Implementation Details
 Each entity type is given its own model within the database:
