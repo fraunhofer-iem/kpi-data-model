@@ -12,8 +12,10 @@ In order to be able to perform a detailed analysis, we collect additional inform
 
 ## Related Elements
 * [Entity Type](entityType.md): object, that distinguishes i.e. data sources from products
+* [Entity Hierarchy](entityHierarchy.md): information on the hierarchical structure of the entity
 * [Influence](influence.md): environmental influence that change the entity's expected behavior
 * [Problem](problem.md): collection of [issues](issue.md), [causes](cause.md), and [solutions](solution.md)
+* [Feature](feature.md): collection of features the entity helps to realize
 
 ## Implementation Details
 |**Entity**|
