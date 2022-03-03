@@ -6,7 +6,7 @@ A limit can have multiple limit problems per bound. In this case, we require a p
 ## Example(s)
 * **Production**:
   Within ATMs, the note transport path is divided into segments, observed by light sensors detecting passing notes. For each segment, the length of the segment and the travel speed of notes is known. Thus, we can derive an expected travel time for notes along a segment.  
-  If the KPI `NoteTransportTime`<sub>`L1, L2`</sub> (see [KPI](kpi.md)) detects an error (see [limit](limit.md)), the conveyor belt between `L1` and `L2` may move too slowly due to its motor not receiving enough power. The situation may be resolved by replacing the motor.
+  If the KPI `NoteTransportTime`<sub>`L1, L2`</sub> (see [KPI](kpi.md)) detects an error (see [limit](limit.md), the conveyor belt between `L1` and `L2` may move too slowly due to its motor not receiving enough power. The situation may be resolved by replacing the motor.
 
 ## Related Elements
 * [Issue](issue.md)
