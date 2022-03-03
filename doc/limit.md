@@ -1,6 +1,6 @@
 # Limit
 Limits represent acceptable value ranges for [KPI](kpi.md) it is assigned to. A limit consists of an expected value, at least one bound, and a [type](limitType.md).  
-A violated bound indicates a [problem](limitProblem.md), that interferes with the behavior of the [entity](entity.md) referenced by the limit's KPI.  
+A violated bound indicates a [problem](problem.md), that interferes with the behavior of the [entity](entity.md) referenced by the limit's KPI.  
 Multiple limits of a single type can be assigned to a single KPI. During evaluation, a KPI's currently valid limits are selected using the [limit's influences](limitInfluences.md)
 
 ## Example(s)
@@ -11,7 +11,7 @@ Multiple limits of a single type can be assigned to a single KPI. During evaluat
 ## Related Elements
 * [KPI](kpi.md): KPI this limit is assigned to
 * [Limit Type](limitType.md): object, that describes the kind of incident occuring if a limit bound is violated 
-* [Limit Problem](limitProblem.md): set of problems, that may be the cause of the incident
+* [Limit Problem](problem.md): set of problems, that may be the cause of the incident
 * [Limit Influences](limitInfluences.md): selects, if limit is valid for the current execution context
 
 ## Implementation Details
