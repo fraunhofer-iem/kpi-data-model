@@ -12,7 +12,8 @@ A limit can have multiple limit problems per bound. In this case, we require a p
 * [Issue](issue.md)
 * [Cause](cause.md)
 * [Solution](solution.md)
-* [Limit](limit.id)
+* [Limit](limit.md)
+* [Feature](feature.md)
 
 ## Implementation Details
 |**Problem**|
