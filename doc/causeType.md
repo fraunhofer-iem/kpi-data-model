@@ -9,7 +9,7 @@ A cause type is a description of a cause that has been previously determined as 
 * [Cause](cause.md): entity-specific instances of this issue type
 
 ## Implementation Details
-|**Issue Type**|
+|**Cause Type**|
 |:--:|
 |id: int|
 |name: str|
