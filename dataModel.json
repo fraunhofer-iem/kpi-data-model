@@ -231,11 +231,7 @@
       "source": "entity",
       "target": "influence",
       "arrowShape": "diamond",
-      "targetLabel": "0..*",
-      "style": {
-        "target-text-margin-x": 18,
-        "target-text-margin-y": 7
-      }
+      "targetLabel": "0..*"
     },
     {
       "source": "influence",
@@ -245,11 +241,7 @@
     {
       "source": "entity",
       "target": "problem",
-      "targetLabel": "0..*",
-      "style": {
-        "target-text-margin-x": 18,
-        "target-text-margin-y": -7
-      }
+      "targetLabel": "0..*"
     },
     {
       "source": "issue",
@@ -269,30 +261,18 @@
     {
       "source": "issue",
       "target": "cause",
-      "targetLabel": "1..*",
-      "style": {
-        "target-text-margin-x": 15,
-        "target-text-margin-y": -6
-      }
+      "targetLabel": "1..*"
     },
     {
       "source": "cause",
       "target": "solution",
-      "targetLabel": "1..*",
-      "style": {
-        "target-text-margin-x": 15,
-        "target-text-margin-y": -6
-      }
+      "targetLabel": "1..*"
     },
     {
       "source": "entity",
       "target": "kpi",
       "arrowShape": "diamond",
-      "targetLabel": "0..*",
-      "style": {
-        "target-text-margin-x": -15,
-        "target-text-margin-y": -5
-      }
+      "targetLabel": "0..*"
     },
     {
       "source": "kpi",
@@ -313,11 +293,7 @@
       "source": "kpi",
       "target": "rule",
       "arrowShape": "diamond",
-      "targetLabel": "2",
-      "style": {
-        "target-text-margin-x": 12,
-        "target-text-margin-y": -5
-      }
+      "targetLabel": "2"
     },
     {
       "source": "rule",
@@ -328,11 +304,7 @@
       "source": "kpi",
       "target": "limit",
       "arrowShape": "diamond",
-      "targetLabel": "1..*",
-      "style": {
-        "target-text-margin-x": 12,
-        "target-text-margin-y": -10
-      }
+      "targetLabel": "1..*"
     },
     {
       "source": "limit",
@@ -343,21 +315,13 @@
       "source": "limit",
       "target": "problem",
       "arrowShape": "diamond",
-      "targetLabel": "1..*",
-      "style": {
-        "target-text-margin-x": 15,
-        "target-text-margin-y": 10
-      }
+      "targetLabel": "1..*"
     },
     {
       "source": "limit",
       "target": "influence",
       "straight": true,
-      "targetLabel": "1..*",
-      "style": {
-        "target-text-margin-x": -20,
-        "target-text-margin-y": 10
-      }
+      "targetLabel": "1..*"
     },
     {
       "source": "problem",
@@ -370,20 +334,14 @@
       "arrowShape": "diamond",
       "targetLabel": "1",
       "style": {
-        "taxi-turn": "50px",
-        "target-text-margin-x": 10,
-        "target-text-margin-y": 12
+        "taxi-turn": "50px"
       }
     },
     {
       "source": "problem",
       "target": "cause",
       "arrowShape": "diamond",
-      "targetLabel": "1",
-      "style": {
-        "target-text-margin-x": 10,
-        "target-text-margin-y": 12
-      }
+      "targetLabel": "1"
     },
     {
       "source": "problem",
@@ -391,9 +349,7 @@
       "arrowShape": "diamond",
       "targetLabel": "1",
       "style": {
-        "taxi-turn": "50px",
-        "target-text-margin-x": 10,
-        "target-text-margin-y": 12
+        "taxi-turn": "50px"
       }
     },
     {
